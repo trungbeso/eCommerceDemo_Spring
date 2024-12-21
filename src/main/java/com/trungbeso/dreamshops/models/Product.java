@@ -13,7 +13,6 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class Product {
 
 	@Id
@@ -38,5 +37,14 @@ public class Product {
 	//1 product have a list of image
 	// orphanRemoval=true mean once product have been deleted, image belong to this product will be deleted too
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-	public List<Image> images;
+	private List<Image> images;
+
+	public Product(String name, String brand, BigDecimal price, int inventory, String description, Category category) {
+		this.name = name;
+		this.brand = brand;
+		this.price = price;
+		this.inventory = inventory;
+		this.description = description;
+		this.category = category;
+	}
 }
