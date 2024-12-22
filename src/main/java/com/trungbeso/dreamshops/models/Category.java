@@ -1,5 +1,6 @@
 package com.trungbeso.dreamshops.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +22,7 @@ public class Category {
 	private String name;
 
 	//1 category belong to many product
+	@JsonIgnore
 	@OneToMany(mappedBy = "category")
 	private List<Product> products;
 

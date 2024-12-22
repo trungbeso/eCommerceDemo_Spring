@@ -29,13 +29,20 @@
     <properties>
         <java.version>17</java.version>
         <projectlombok-lombok.version>1.18.34</projectlombok-lombok.version>
+        <modelmapper-spring.version>2.4.4</modelmapper-spring.version>
     </properties>
     <dependencies>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.23</version>
+            <groupId>org.modelmapper.extensions</groupId>
+            <artifactId>modelmapper-spring</artifactId>
+            <version>${modelmapper-spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.1.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->

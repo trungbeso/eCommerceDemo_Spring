@@ -30,6 +30,7 @@ public class ImageController {
 
 	IImageService imageService;
 
+	@PostMapping("/upload")
 	public ResponseEntity<ApiResponse> saveImages(@RequestParam List<MultipartFile> files,
 	                                              @RequestParam Long productId) {
 		try {

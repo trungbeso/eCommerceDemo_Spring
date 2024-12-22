@@ -1,5 +1,6 @@
 package com.trungbeso.dreamshops.services.product;
 
+import com.trungbeso.dreamshops.dtos.ProductDto;
 import com.trungbeso.dreamshops.models.Product;
 import com.trungbeso.dreamshops.request.AddProductRequest;
 import com.trungbeso.dreamshops.request.ProductUpdateRequest;
@@ -28,4 +29,8 @@ public interface IProductService {
 	List<Product> getProductByBrandAndName(String brand, String name);
 
 	Long countProductsByBrandAndName(String brand, String name);
+
+	List<ProductDto> getConvertedProducts(List<Product> products);
+
+	ProductDto convertToDto(Product product);
 }
